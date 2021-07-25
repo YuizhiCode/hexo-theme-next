@@ -13,8 +13,8 @@
 cache:
   enable: true
 
-# Remove unnecessary files after hexo generate.
-minify: false
+# hexo 生成后删除不需要的文件。
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -36,13 +36,13 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 
 # ---------------------------------------------------------------
@@ -66,8 +66,8 @@ creative_commons:
   license: by-nc-sa
   # Available values: big | small
   size: small
-  sidebar: false
-  post: false
+  sidebar: true
+  post: true
   # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
   # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
   language:
@@ -127,9 +127,9 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url:  /images/blog.png
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
   rotated: false
 
@@ -141,7 +141,7 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
+  GitHub: https://github.com/YuizhiCode || fab fa-github
   #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
@@ -259,8 +259,9 @@ reward_settings:
   #comment: Buy me a coffee
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  reward_comment: 您的支持将鼓励我继续创作！😘
+  wechatpay: /images/wechatpay.png
+  alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
@@ -372,7 +373,7 @@ back2top:
   # Back to top in sidebar.
   sidebar: false
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -414,43 +415,36 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: false
+  enable: true
 
-  # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
+  # 外链字体库地址，例如 //fonts.googleapis.com (默认值)
   host:
 
-  # Font options:
-  # `external: true` will load this font family from `host` above.
-  # `family: Times New Roman`. Without any quotes.
-  # `size: x.x`. Use `em` as unit. Default: 1 (16px)
-
-  # Global font settings used for all elements inside <body>.
+  # 全局字体，应用在 body 元素上 Monda
   global:
     external: true
-    family: Lato
-    size:
+    family: Josefin Sans
+    size: 0.9
 
-  # Font settings for site title (.site-title).
-  title:
-    external: true
-    family:
-    size:
-
-  # Font settings for headlines (<h1> to <h6>).
+  # 标题字体 (h1, h2, h3, h4, h5, h6)
   headings:
     external: true
-    family:
-    size:
+    family: Roboto Slab
 
-  # Font settings for posts (.post-body).
+  # 文章字体
   posts:
     external: true
     family:
 
-  # Font settings for <code> and code blocks.
+  # Logo 字体
+  logo:
+    external: true
+    family: Lobster Two
+
+  # 代码字体，应用于 code 以及代码块
   codes:
     external: true
-    family:
+    family: PT Mono
 
 
 # ---------------------------------------------------------------
@@ -705,7 +699,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
@@ -725,11 +719,15 @@ algolia_search:
   enable: false
   hits:
     per_page: 10
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}"
+    hits_stats: "${hits} results found in ${time} ms"
 
 # Local Search
 # Dependencies: https://github.com/next-theme/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -746,8 +744,7 @@ local_search:
 # See: https://theme-next.js.org/docs/third-party-services/chat-services
 # ---------------------------------------------------------------
 
-# A button to open designated chat widget in sidebar.
-# Firstly, you need to enable and configure the chat service.
+#在侧边栏中打开指定聊天小部件的按钮。首先，您需要启用和配置聊天服务。
 chat:
   enable: false
   icon: fa fa-comment # Icon name in Font Awesome, set false to disable icon.
@@ -784,10 +781,10 @@ gitter:
 # Note tag (bootstrap callout)
 note:
   # Note tag style values:
-  #  - simple    bootstrap callout old alert style. Default.
-  #  - modern    bootstrap callout new (v2-v3) alert style.
-  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
-  #  - disabled  disable all CSS styles import of note tag.
+  #  - simple    引导标注旧警报样式。默认。
+  #  - modern    引导标注新 (v2-v3) 警报样式。
+  #  - flat      带有背景的平面标注样式，如 Mozilla 或 StackOverflow。
+  #  - disabled  禁用笔记标签的所有 CSS 样式导入。
   style: simple
   icons: false
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
