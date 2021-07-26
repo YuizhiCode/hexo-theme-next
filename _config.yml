@@ -50,8 +50,8 @@ darkmode: true
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /manifest.json
@@ -82,11 +82,11 @@ creative_commons:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  #home: / || fa fa-home
+  home: / || fa fa-home
   #about: /about/ || fa fa-user
-  #tags: /tags/ || fa fa-tags
+  tags: /tags/ || fa fa-tags
   #categories: /categories/ || fa fa-th
-  #archives: /archives/ || fa fa-archive
+  archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -119,9 +119,9 @@ sidebar:
   #  - remove  totally remove sidebar including sidebar toggle.
   display: post
 
-  # Sidebar padding in pixels.
+  # 以像素为单位的侧边栏填充。
   padding: 18
-  # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
+  # 侧边栏距顶部菜单栏的偏移量（以像素为单位）(only for Pisces | Gemini).
   offset: 12
 
 # Sidebar Avatar
@@ -186,14 +186,14 @@ toc:
 # See: https://theme-next.js.org/docs/theme-settings/footer
 # ---------------------------------------------------------------
 
-# Show multilingual switcher in footer.
+# 在页脚中显示多语言切换器。
 language_switcher: false
 
 footer:
-  # Specify the year when the site was setup. If not defined, current year will be used.
-  #since: 2021
+  # 指定站点的建立年份。如果未定义，将使用当前年份。
+  since: 2021-2100
 
-  # Icon between year and copyright info.
+  # 年份和版权信息之间的图标。
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
     name: fa fa-heart
@@ -208,7 +208,7 @@ footer:
   # Powered by Hexo & NexT
   powered: true
 
-  # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
+  # 中国用户的Brian ICP和gongan信息。 See: https://beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
     enable: false
     icp:
@@ -225,12 +225,12 @@ footer:
 # See: https://theme-next.js.org/docs/theme-settings/posts
 # ---------------------------------------------------------------
 
-# Automatically excerpt description in homepage as preamble text.
+# 自动摘录主页中的描述作为序言文本。
 excerpt_description: true
 
-# Read more button
-# If true, the read more button will be displayed in excerpt section.
-read_more_btn: true
+# 阅读更多按钮
+# 如果为 true，阅读更多按钮将显示在摘录部分。
+read_more_btn: false
 
 # Post meta display settings
 post_meta:
@@ -247,19 +247,18 @@ symbols_count_time:
   separated_meta: true
   item_text_total: false
 
-# Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+# 使用图标而不是符号来指示帖子底部的标签
+tag_icon: true
 
 # Donate (Sponsor) settings
 # Front-matter variable (unsupport animation).
 reward_settings:
-  # If true, a donate button will be displayed in every article by default.
-  enable: false
-  animation: false
-  #comment: Buy me a coffee
+  # 如果为 true，默认情况下每篇文章中都会显示一个捐赠按钮。
+  enable: true
+  animation: true
+  comment: 您的支持将鼓励我继续创作！😘
 
 reward:
-  reward_comment: 您的支持将鼓励我继续创作！😘
   wechatpay: /images/wechatpay.png
   alipay: /images/alipay.png
   #paypal: /images/paypal.png
