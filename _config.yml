@@ -21,7 +21,7 @@ minify: true
 custom_file_path:
   #head: source/_data/head.njk
   #header: source/_data/header.njk
-  #sidebar: source/_data/sidebar.njk
+  sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
@@ -126,12 +126,12 @@ sidebar:
 
 # Sidebar Avatar
 avatar:
-  # Replace the default image and set the url here.
+  # 替换默认图片并在此处设置 url。
   url:  /images/blog.png
-  # If true, the avatar will be dispalyed in circle.
+  # 如果为 true，则头像将显示为圆形。
   rounded: true
-  # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  # 如果为 true，则头像将随光标旋转。
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -363,7 +363,7 @@ codeblock:
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac
     style:
 
@@ -508,9 +508,9 @@ math:
 # For more information: https://github.com/next-theme/pjax
 pjax: false
 
-# FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
+# FancyBox 是一种工具，它提供了一种漂亮而优雅的方式来为图像添加缩放功能。
 # For more information: https://fancyapps.com/fancybox/
-fancybox: false
+fancybox: true
 
 # A JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
@@ -579,14 +579,14 @@ disqus:
 # DisqusJS
 # For more information: https://disqusjs.skk.moe
 disqusjs:
-  enable: false
+  enable: true
   # API Endpoint of Disqus API (https://disqus.com/api/docs/).
-  # Leave api empty if you are able to connect to Disqus API. Otherwise you need a reverse proxy for it.
-  # For example:
+  # 如果您能够连接到 Disqus API，请将 api 留空。否则你需要一个反向代理。
+  # 例如：
   # api: https://disqus.skk.moe/disqus/
   api:
-  apikey: # Register new application from https://disqus.com/api/applications/
-  shortname: # See: https://disqus.com/admin/settings/general/
+  apikey: q9bb0Jja5pE7npFfotijfCTJIssqn9gucM0W6Hxqn1DoAoJKkQUT2pW2EXq70Ytx # Register new application from https://disqus.com/api/applications/
+  shortname: yuizhi  # See: https://disqus.com/admin/settings/general/
 
 # Changyan
 # For more information: https://changyan.kuaizhan.com
@@ -785,7 +785,7 @@ note:
   #  - flat      带有背景的平面标注样式，如 Mozilla 或 StackOverflow。
   #  - disabled  禁用笔记标签的所有 CSS 样式导入。
   style: simple
-  icons: false
+  icons: true
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
   light_bg_offset: 0
@@ -941,7 +941,7 @@ vendors:
   canvas_ribbon:
 
 # Assets
-# Accelerate delivery of static files using a CDN
+# 使用 CDN 加速静态文件的交付
 css: css
 js: js
 images: images

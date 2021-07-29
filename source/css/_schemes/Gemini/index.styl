@@ -65,15 +65,34 @@
 // ==================================================
 // Headers.
 // ==================================================
-.post-body {
-  h1, h2 {
-    border-bottom: 1px solid $body-bg-color;
-  }
-
-  h3 {
-    border-bottom: 1px dotted $body-bg-color;
-  }
+//自己修改样式
+.post-body h1:before,
+.post-body h2:before,
+.post-body h3:before,
+.post-body h4:before,
+.post-body h5:before,
+.post-body h6:before {
+  font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+  content: "#";
+  color: #6db33f;
+  font-size: 1.2em;
+  padding-right: 15px;
 }
+
+.post-body a {
+  color: #6db33f;
+  border-bottom: none;
+}
+//
+//.post-body {
+//  h1, h2 {
+//    border-bottom: 1px solid $body-bg-color;
+//  }
+//
+//  h3 {
+//    border-bottom: 1px dotted $body-bg-color;
+//  }
+//}
 
 // ==================================================
 // > 768px & < 991px
