@@ -191,7 +191,7 @@ language_switcher: false
 
 footer:
   # 指定站点的建立年份。如果未定义，将使用当前年份。
-  since: 2021-2100
+  since: 2020
 
   # 年份和版权信息之间的图标。
   icon:
